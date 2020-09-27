@@ -11,12 +11,12 @@ capture.set(4, frame_height)
 capture.set(10, 150)
 
 # sets of the colors to detect - hMin, sMin, vMin, hMax, sMax, vMax
-color_sets = [[165, 126, 64, 179, 237, 255],
-              [0, 163, 81, 179, 255, 255]]
+color_sets = [[165, 151, 0, 179, 255, 255],
+              [97, 192, 51, 119, 255, 255]]
 
 # color values written in BGR not RGB
-color_values = [[255, 0, 0],
-                [0, 0, 255]]
+color_values = [[0, 0, 255],
+                [255, 0, 0]]
 
 
 def find_color(cap, colors, values):
@@ -37,7 +37,7 @@ def get_contours(img):
     x, y, w, h = 0, 0, 0, 0
     for contour in contours:
         area = cv2.contourArea(contour)
-        if area < 500 and area > 200:
+        if area > 500:
             # cv2.drawContours(capture_result, contour, -1, (255, 0, 179), 5)
             peri = cv2.arcLength(contour, True)
             approx = cv2.approxPolyDP(contour, 0.02 * peri, True)
