@@ -30,6 +30,7 @@ This project utilises computer vision techniques to detect and track colours in 
 
 ## Dependencies
 - `OpenCV` - A library for computer vision and machine learning algorithms.
+- `NumPy` - A library for numerical computing in Python.
 
 ## Contributing
 Contributions are welcome! Please feel free to open a pull request or submit an issue.
